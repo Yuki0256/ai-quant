@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>量化交易作业 — 震有科技分析</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            background: #f8fafc; color: #1e293b; line-height: 1.8; padding: 0;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+
+        /* 头部 */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: white; padding: 60px 24px; text-align: center; margin-bottom: 40px;
+        }
+        .hero h1 { font-size: 32px; margin-bottom: 8px; }
+        .hero p { opacity: .85; font-size: 15px; }
+
+        /* 章节 */
+        section { background: white; border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+        h2 { font-size: 22px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #2563eb; color: #0f172a; }
+        h3 { font-size: 17px; margin: 20px 0 10px; color: #2563eb; }
+        p, li { color: #334155; }
+        ul, ol { padding-left: 24px; margin: 10px 0; }
+        li { margin-bottom: 6px; }
+
+        /* 图表 */
+        .chart-box { text-align: center; margin: 24px 0; }
+        .chart-box img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+        .chart-box .caption { margin-top: 8px; font-size: 13px; color: #64748b; }
+
+        /* 数据表格 */
+        .table-wrap { overflow-x: auto; margin: 16px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { padding: 10px 12px; text-align: right; border-bottom: 1px solid #e2e8f0; }
+        th { background: #1e293b; color: white; font-weight: 600; text-align: right; }
+        th:first-child, td:first-child { text-align: left; }
+        tr:hover { background: #f1f5f9; }
+
+        .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .tag-blue { background: #dbeafe; color: #1d4ed8; }
+        .tag-green { background: #dcfce7; color: #166534; }
+
+        .meta { font-size: 14px; color: #64748b; margin-top: 8px; }
+        .highlight { background: #fef9c3; padding: 1px 4px; border-radius: 3px; }
+
+        @media (max-width: 640px) {
+            .container { padding: 20px 12px; }
+            .hero { padding: 40px 16px; }
+            .hero h1 { font-size: 24px; }
+            section { padding: 20px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>量化交易作业报告</h1>
+    <p>震有科技（688418.SH）— 卫星互联网量化分析</p>
+</div>
+
+<div class="container">
+
+    <!-- Q1 -->
+    <section>
+        <h2>一、量化交易相比传统手工交易的优势</h2>
+
+        <h3>1. 客观性与纪律性</h3>
+        <p>传统手工交易容易受情绪影响——贪婪时追高、恐惧时割肉。量化交易基于预设的数学模型和规则执行，策略信号触发后自动下单，杜绝人为情绪干扰，严格执行交易纪律。</p>
+
+        <h3>2. 处理多维度信息</h3>
+        <p>人脑同时跟踪数十只股票已很吃力，量化系统可以同时监控数千只标的，综合价格、成交量、基本面指标、新闻情感、宏观经济因子等多维度数据，发现人眼难以察觉的规律。</p>
+
+        <h3>3. 回测验证</h3>
+        <p>手工交易依赖个人经验判断，难以验证策略的有效性。量化交易可以将策略放在历史数据上回测，用收益率、夏普比率、最大回撤等指标客观评估策略表现，避免"幸存者偏差"式的自我欺骗。</p>
+
+        <h3>4. 高效执行与低延迟</h3>
+        <p>量化系统可以在毫秒级完成下单，捕捉手工交易无法企及的短线机会。对于高频策略，机器执行的效率和精度远超人工。即使对中低频策略，自动化执行也大幅降低了盯盘时间和操作成本。</p>
+
+        <h3>5. 持续运作与规模化</h3>
+        <p>量化系统可以 7×24 小时运行，无需休息。同时策略可以轻松从 1 万元扩展到 1 亿元规模，边际成本极低。手工交易者管理大资金时面临的冲击成本和心理压力，量化系统可通过算法交易平滑处理。</p>
+    </section>
+
+    <!-- Q2 -->
+    <section>
+        <h2>二、基本概念解释</h2>
+
+        <h3>K 线（K-line / Candlestick）</h3>
+        <p>K 线起源于日本大米期货交易，是金融市场最通用的价格可视化工具。每一根 K 线记录一个时间单位（如 1 天）内的四个价格：<strong>开盘价</strong>（Open）、<strong>收盘价</strong>（Close）、<strong>最高价</strong>（High）、<strong>最低价</strong>（Low）。</p>
+        <ul>
+            <li><strong>阳线</strong>（红色/空心）：收盘价 > 开盘价，表示价格上涨</li>
+            <li><strong>阴线</strong>（绿色/实心）：收盘价 < 开盘价，表示价格下跌</li>
+            <li><strong>上影线</strong>：最高价到实体的范围，反映上方阻力</li>
+            <li><strong>下影线</strong>：最低价到实体的范围，反映下方支撑</li>
+        </ul>
+        <p>多个 K 线组合形成价格形态（如头肩顶、锤子线等），被技术分析者用来预测价格走势。</p>
+
+        <h3>基本面（Fundamental Analysis）</h3>
+        <p>基本面分析是从上市公司的内在价值出发，研究影响股票价格的根本因素，包括：</p>
+        <ul>
+            <li><strong>宏观层面</strong>：GDP 增速、利率政策、通货膨胀、行业政策等</li>
+            <li><strong>公司层面</strong>：财务报表（营收、利润、资产负债率）、PE/PB 估值、ROE、护城河、管理层质量等</li>
+        </ul>
+        <p>核心逻辑是"买股票就是买公司"——当市场价格低于公司内在价值时买入，高于时卖出。典型代表是价值投资（格雷厄姆、巴菲特）。</p>
+
+        <h3>技术面（Technical Analysis）</h3>
+        <p>技术面分析不关注公司值多少钱，而是通过研究历史和当前的交易数据（价格、成交量）来预测未来走势。主要工具包括：</p>
+        <ul>
+            <li><strong>图表形态</strong>：K 线组合、趋势线、支撑/阻力位</li>
+            <li><strong>技术指标</strong>：移动平均线（MA）、MACD、RSI、布林带等</li>
+            <li><strong>量价关系</strong>：成交量的变化验证价格走势的有效性</li>
+        </ul>
+        <p>核心假设是"历史会重演"，市场参与者的行为模式会在相似的价格形态下重复出现。技术面在量化交易中广泛使用，因为其数据标准化、易建模。</p>
+    </section>
+
+    <!-- Q3 -->
+    <section>
+        <h2>三、Tushare 数据获取与可视化</h2>
+
+        <p>使用 Tushare Pro API 获取震有科技（688418.SH）过去一年的每日交易数据，共 <span class="highlight">242</span> 条记录，数据日期从 <strong>2025-07-04</strong> 至 <strong>2026-07-03</strong>。</p>
+
+        <div class="chart-box">
+            <img src="reports/close_price.png" alt="震有科技收盘价走势图">
+            <div class="caption">图：震有科技（688418.SH）近一年收盘价走势</div>
+        </div>
+
+        <h3>最近 10 个交易日数据</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>开盘</th>
+                        <th>最高</th>
+                        <th>最低</th>
+                        <th>收盘</th>
+                        <th>涨跌幅</th>
+                        <th>成交量(手)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>2026-07-03</td><td>49.90</td><td>52.68</td><td>49.71</td><td>52.10</td><td style="color:positive">+4.41%</td><td>91255</td></tr>
+<tr><td>2026-07-02</td><td>50.00</td><td>52.18</td><td>47.63</td><td>49.90</td><td style="color:positive">+1.14%</td><td>98317</td></tr>
+<tr><td>2026-07-01</td><td>48.00</td><td>50.21</td><td>47.19</td><td>49.34</td><td style="color:positive">+2.62%</td><td>76994</td></tr>
+<tr><td>2026-06-30</td><td>45.60</td><td>48.30</td><td>45.11</td><td>48.08</td><td style="color:positive">+6.37%</td><td>87987</td></tr>
+<tr><td>2026-06-29</td><td>45.50</td><td>46.33</td><td>43.91</td><td>45.20</td><td style="color:positive">+0.89%</td><td>60930</td></tr>
+<tr><td>2026-06-26</td><td>43.89</td><td>46.87</td><td>42.88</td><td>44.80</td><td style="color:positive">+1.04%</td><td>62846</td></tr>
+<tr><td>2026-06-25</td><td>46.64</td><td>47.75</td><td>43.80</td><td>44.34</td><td style="color:negative">-4.65%</td><td>60517</td></tr>
+<tr><td>2026-06-24</td><td>46.50</td><td>46.62</td><td>44.20</td><td>46.50</td><td style="color:positive">+1.09%</td><td>51871</td></tr>
+<tr><td>2026-06-23</td><td>42.80</td><td>47.30</td><td>42.40</td><td>46.00</td><td style="color:positive">+5.36%</td><td>79485</td></tr>
+<tr><td>2026-06-22</td><td>46.64</td><td>48.00</td><td>42.78</td><td>43.66</td><td style="color:negative">-5.37%</td><td>59467</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>数据文件</h3>
+        <ul>
+            <li><strong>CSV 数据</strong>：<code>data/688418_SH_daily.csv</code>（包含 ts_code, trade_date, open, high, low, close, pre_close, change, pct_chg, vol, amount）</li>
+            <li><strong>收盘价曲线图</strong>：<code>reports/close_price.png</code></li>
+        </ul>
+
+        <h3>核心代码摘要</h3>
+        <pre style="background:#1e293b;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.6;margin-top:8px;">import tushare as ts
+from dotenv import load_dotenv
+
+load_dotenv()
+pro = ts.pro_api(os.getenv('TUSHARE_TOKEN'))
+
+# 获取过去一年数据
+df = pro.daily(ts_code='688418.SH',
+               start_date='20250704',
+               end_date='20260704')
+df = df.sort_values('trade_date')
+
+# 保存 CSV
+df.to_csv('data/688418_SH_daily.csv', index=False, encoding='utf-8-sig')
+
+# 画收盘价曲线图
+plt.plot(df['trade_date'], df['close'])
+plt.savefig('reports/close_price.png')</pre>
+    </section>
+
+    <hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;">
+    <p style="text-align:center;color:#94a3b8;font-size:13px;">
+        数据来源：Tushare Pro &nbsp;|&nbsp; 生成时间：2026-07-04
+    </p>
+</div>
+
+</body>
+</html>
